@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1586256610736.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "D3C3FBC7",
+    "lastKnownWriteTime" : 2446633574672,
+    "last_content_update" : 1586256610736,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "id" : "27a490fe967b4333a0066a84fd484017",
+        "name" : "WeatherForecast",
+        "title" : "WeatherForecast"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "object_explorer"
+}

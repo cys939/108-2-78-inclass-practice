@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1586256677423.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "FDFABAED",
+    "lastKnownWriteTime" : 27866417835016240,
+    "last_content_update" : 1586256677423,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "id" : "d6dc978fbdda4a1291801ee030ce21c1",
+        "name" : "天氣預報",
+        "title" : "天氣預報"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "object_explorer"
+}

@@ -1,0 +1,302 @@
+---
+title: "0331practice"
+author: "cys939"
+date: "2020/4/7"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+##List
+
+```{r}
+vectorExample <- c(2,6,7)
+listExample <- list(2,6,7)
+
+print(vectorExample)
+print(listExample)
+```
+
+```{r}
+##用vector儲存
+c("2020-03-31T13:40:55Z",
+"一芳",
+"2",
+"水果茶")
+
+#用list儲存
+library(lubridate)
+list(
+ymd_hms("2020-03-31T13:40:55Z"), #Date/Time
+"一芳", #Character
+2, #Numeric
+"水果茶" #Character
+)
+```
+```{r}
+##用vector儲存
+c("2020-03-31T13:40:55Z",
+"一芳",
+"2",
+"水果茶")
+
+#用list儲存
+library(lubridate)
+`小明交易1` <- list(
+  ymd_hms("2020-03-31T13:40:55Z"), # Date/Time class
+  "一芳", # character
+  2, # numeric
+  "水果茶" # character
+)
+print(`小明交易1`)
+
+```
+
+```{r}
+c(
+  c("108學年第1學期", "高級會計學", "高等統計學"), #向量1
+  c("108學年第2學期", "食在拉丁美州") #向量2
+)
+
+#用list
+list(
+  c("108學年第1學期", "高級會計學", "高等統計學"), #向量1
+  c("108學年第2學期", "食在拉丁美州") #向量2
+)
+```
+
+```{r}
+# list含兩個vectors
+`小明108學年課表A` <- list(
+  c("108-1","高級會計學","高等統計學"),
+  c("108-2","食在拉丁美洲")
+)
+print(`小明108學年課表A`)
+```
+
+```{r}
+# list含兩個lists
+`小明108學年課表B` <- list(
+  list("108-1","高級會計學","高等統計學"),
+  list("108-2","食在拉丁美洲")
+)
+print(`小明108學年課表B`)
+```
+
+
+```{r}
+# list含兩個lists
+`小明108學年課表C` <- list(
+  list(
+  c("108-1"),
+  c("高級會計學","高等統計學")
+  ),
+  list(
+  c("108-2"),
+  c("食在拉丁美洲")
+  )
+)
+print(`小明108學年課表C`)
+```
+物件值可以取名
+```{r}
+`小明108學年課表D` <- list(
+  `上學期`=list(
+   semester=c("108-1"),
+   c("高級會計學","高等統計學")
+  ),
+  list(
+   semester=c("108-2"),
+   courses=c("食在拉丁美洲")
+  )
+)
+print(`小明108學年課表D`)
+```
+
+##Github Commit
+
+```{r}
+commit <- list(
+  author = list(
+   name="Martin老師",
+   email="mtlin@gm.ntpu.edu.tw",
+   time=ymd_hms("2020-03-25T07:17:40Z")),
+  committer = list(
+   name="emilyluckey",
+   email="emily007@gmail.com",
+   time=ymd_hms("2020-03-26T08:18:40Z")
+  ),
+  message = "update"
+)
+print(commit)
+
+
+#  commiter = ,
+#  message = ,
+#)
+```
+
+```{r}
+browseURL("https://api.github.com/repos/tpemartin/108-2-56-inclass-practice/commits") 
+```
+
+
+```{r}
+library(jsonlite) # 不少同學這行會有Error，還記得如何排除嗎？
+toJSON(commit)
+```
+
+```{r}
+commit <- list(
+  name=c("小明"),
+  year=c("108"),
+  
+  semester1=
+    list("1",
+  courses1=
+    list(
+  Tname = "Alice",
+  subject = "個體經濟學",
+  score = "85"
+  ),
+  courses2=
+    list(
+  Tname = "Mark",
+  subject = "總體經濟學",
+  score = "73")
+  ),
+  
+  semester2=
+    list("2",
+  course=
+    list(
+  Tname = "Jason",
+  subject = "作業研究",
+  score = "90")
+  )
+)
+print(commit)
+```
+
+```{r}
+`小明的修課記錄A` <- 
+  list(
+    name="小明",
+    semesters=
+      list(
+      `108-1`=
+          list(
+            year=108,
+            semester=1,
+            courses=
+              list(
+                list(
+                  name="個體經濟學",
+                  teacher="Alice",
+                  grade=85
+                ),
+                list(
+                  name="總體經濟學",
+                  teacher="Mark",
+                  grade=78
+                )
+              )
+            ),
+        `108-2`=
+          list(
+            year=108,
+            semester=2,
+            courses=
+              list(
+                list(
+                  name="作業研究",
+                  teacher="Jason",
+                  grade=90
+                )
+              )
+            )
+      ) 
+    )
+print(`小明的修課記錄A`)
+```
+
+```{r}
+library(jsonlite)
+fromJSON("https://opendata.cwb.gov.tw/fileapi/v1/opendataapi/F-C0032-001?Authorization=rdec-key-123-45678-011121314&format=JSON") ->
+  weather_next36hours
+```
+
+```{r}
+`WeatherForecast` <- list(
+  today = "2020-03-31",
+  tomorrow = "2020-04-01",
+    Taipei = 
+    list( 
+      MaxT = "25",
+      MinT = "18"),
+    NewTaipei = 
+    list( 
+      MaxT = "24",
+      MinT = "15")
+  )
+
+print(`WeatherForecast`)
+```
+
+```{r}
+`天氣預報` <-list(
+  `台北市` = list(
+    date = c(
+      today = "2020-03-31", 
+      tomorrow = "2020-04-01"
+    ), 
+    highest = 25, 
+    lowest = 18
+  ), 
+  `新北市` = list(
+    date = c(
+      today = "2020-03-31", 
+      tomorrow = "2020-04-01"
+    ), 
+    higest = 24, 
+    lowest = 15
+  )
+)
+print(`天氣預報`)
+```
+
+
+
+```{r}
+save(commit, `小明108學年課表A` , `108-1修課記錄`, file="0401.Rda")
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

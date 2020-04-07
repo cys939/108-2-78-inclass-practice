@@ -1,0 +1,10 @@
+"0","save(commit, `小明108學年課表A` , `108-1修課記錄`, file=""0401.Rda"")"
+"2","Error in save(commit, 小明108學年課表A, `108-1修課記錄`, file = ""0401.Rda"") : 
+  object ‘`108-1修課記錄`’ not found
+"
+"2","此外: "
+"2","Warning message:
+"
+"2","In grepl(""|||"", what, fixed = TRUE) :"
+"2"," 輸入的字串 1 不適用於此語言環境
+"
