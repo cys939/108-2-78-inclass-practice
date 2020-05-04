@@ -1,0 +1,8 @@
+"0","pick_not_fromTaipeiMetro <- ! pick_fromTaipeiMetro"
+"2","Warning message:
+"
+"2","In grepl(""|||"", what, fixed = TRUE) :"
+"2"," 輸入的字串 1 不適用於此語言環境
+"
+"0","# 或"
+"0","pick_not_fromTaipeiMetro <- !(example$residence %in% set_TaipeiMetro) # (..) 裡面會先運算完才做外面!的處理"
